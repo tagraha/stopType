@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plugin ngetik</title>
+</head>
+<body>
+ 
+  <input type="text" id="betotElement">
+  <p id="status_stop">Please type something</p>
+  
+  <script type="text/javascript" src="stoptype.js"></script>
+  
+  <script type="text/javascript">
+    
+    //plugin usage below
+    var betot = new Stoptype();
+    betot.detectFinishTyping("betotElement", function(){
+      
+      var textYangDiketik = document.getElementById("betotElement").value;
+      document.getElementById("status_stop").innerHTML = textYangDiketik;
+      
+    });
+    
+    
+  </script>
+</body>
+</html>
